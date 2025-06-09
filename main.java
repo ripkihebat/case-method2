@@ -25,7 +25,30 @@ public class Main {
                 case 2:
                     antrian.tampilkanAntrian();
                     break;
+                
+                case 3:
+                    if (!antrian.isEmpty()) {
+                        Pasien pasienDilayani = antrian.layaniPasien();
+                        TransaksiLayanan transaksi = TransaksiLayanan.prosesTransaksi(pasienDilayani);
+                        transaksiQueue.enqueue(transaksi);
+                    } else {
+                        System.out.println(">> Tidak ada pasien dalam antrian.");
+                    }
+                    break;
+                case 4:
+                    System.out.println(">> Sisa pasien dalam antrian: " + antrian.getSisaAntrian());
+                    break;
+                case 5:
+                    transaksiQueue.tampilkanRiwayat();
+                    break;
+                case 0:
+                    System.out.println(">> Terima kasih, program selesai. Semoga Pasien lekas sembuh!");
+                    break;
+                default:
+                    System.out.println(">> Pilihan tidak valid.");
+                    
             }
-        }
+        } while (pilihan != 0);
+    sc.close();
     }
 }
