@@ -2,7 +2,6 @@ public class Main {
     public static void main(String[] args) {
         LinkedListPasien antrian = new LinkedListPasien();
         QueueTransaksi transaksiQueue = new QueueTransaksi();
-
         int pilihan;
         java.util.Scanner sc = new java.util.Scanner(System.in);
         System.out.println();
@@ -46,7 +45,6 @@ public class Main {
                     break;
                 default:
                     System.out.println(">> Pilihan tidak valid.");
-                    
             }
         } while (pilihan != 0);
     sc.close();
