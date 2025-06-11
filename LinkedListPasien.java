@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class LinkedListPasien {
-    private NodePasien head;
-    private NodePasien tail;
-    private int size;
+    NodePasien head;
+    NodePasien tail;
+    int size;
 
     public LinkedListPasien() {
         this.head = null;
